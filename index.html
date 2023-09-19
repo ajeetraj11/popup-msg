@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav>Toast Popup
+        <i class="bi bi-brightness-high-fill" id="Dark"></i>
+    </nav>
+
+    <div class="main">
+        
+        <select id="horizontal">
+           <option value="left">Left</option>
+           <option value="right">Right</option>
+        </select>
+
+        <select id="vertical">
+            <option value="top">Top</option>
+            <option value="bottom">Bottom</option>
+        </select>
+
+        <select id="toast-type">
+            <option value="success">Success</option>
+            <option value="error">Error</option>
+            <option value="warning">Warning</option>
+            <option value="info">Info</option>
+        </select>
+
+        <input class="text-msg" type="text" value="Hello Developers !">
+
+        <div class="duration">
+        <label for="range">Duration</label>
+        <input id="range" type="range" min="2" max="10">
+        </div>
+
+        <button class="show-botton">Show Toast</button>
+
+    </div>
+
+    <div class="main-toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>

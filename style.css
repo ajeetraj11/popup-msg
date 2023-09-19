@@ -1,0 +1,174 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+/* ......................................navbar..................................... */
+
+nav{
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    box-shadow:0px 5px 10px gray;
+    margin-bottom: 25px;
+}
+nav i{
+    position: absolute;
+    top: 1.5vh;
+    left:92%;
+}
+
+/* ................................containt....................................... */
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 15px;
+    margin-inline: auto;
+    border: transparent;
+    padding: 40px 60px;
+    margin-top: 50px;
+    border-radius:10%;
+    background: rgba(0,0,0,0.2);
+    box-shadow: 8px 8px 40px black;
+}
+
+
+select,input,button{
+    padding: 8px;
+    font-size: 1.2rem;
+}
+.duration{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: inherit;
+   
+}
+#range{
+   flex-grow: 1;
+}
+
+.show-botton{
+    background-color: aqua;
+    width: 200px;
+    font-weight: 500;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    left: 2.5rem;
+    
+}
+.show-botton:hover{
+    cursor: pointer;
+    background-color: rgb(39, 39, 173);
+    font-weight: 700;
+    color: aliceblue;
+    filter:drop-shadow(10px 10px 10px black);
+    transition:all 0.2s;
+    transform: scale(1.05);
+
+}
+
+
+ 
+/* -------------------------------------toast-content------------------------------------------ */ 
+
+.toast{
+    background-color: pink;
+    padding: 0.5rem;
+    border-radius:0.25rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fromLeft 0.2s ease-in;
+}
+
+.toast.goLeft{
+    animation:toLeft 0.2s ease-in forwards;
+}
+@keyframes fromLeft{
+    0%{transform: translateX(-100%);}
+    100%{transform: translateX(0%);}
+}
+@keyframes toLeft{
+    0%{transform: translateX(0%);}
+    100%{transform: translateX(-100%);}
+}
+
+/* ..............................right............................ */
+
+.main-toast.right .toast{
+    animation:  fromRight 0.2s ease-in;
+}
+.main-toast.right .toast.goRight{
+    animation: toRight 0.2s ease-in forwards;
+}
+@keyframes fromRight{
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(0%);}
+}
+@keyframes toRight{
+    0%{transform: translateX(0%);}
+    100%{transform: translateX(100%);}
+}
+
+/* ......................................................................... */
+
+.toast.success::before{
+    content: '✓';
+}
+.toast.error::before{
+    content: '✗';
+}
+.toast.warning::before{
+    content: '⚠';
+}
+.toast.info::before{
+    content: 'ⓘ';
+}
+.toast.success{
+   background-color: green;
+}
+.toast.error{
+    background-color: rgb(244, 0, 0);
+}
+.toast.warning{
+    background-color: rgb(233, 135, 99);
+}
+.toast.info{
+    background-color: rgb(101, 101, 66);
+}
+.toast span{
+    cursor: pointer;
+}
+
+
+.main-toast{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    top: 4rem;
+    left: 1rem;
+    color: white;
+
+}
+.main-toast.right{
+    left: auto;
+    right: 1rem;
+}
+.main-toast.bottom{
+    top: auto;
+    bottom: 1rem;
+}
