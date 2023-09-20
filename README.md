@@ -11,7 +11,7 @@ A simple popup message mini project created with HTML, CSS, and JavaScript.
 - [License](#license)
 
 ## Demo
-You can also try the live demo [here](https://ajeetraj11.github.io/popup-msg/).
+You can also try the live demo [here](https://popup-msg-ajeetraj11.vercel.app/).
 
 ## Description
 This mini project demonstrates how to create a popup message using web technologies like HTML, CSS, and JavaScript. It provides a simple and customizable popup that you can integrate into your web projects.
